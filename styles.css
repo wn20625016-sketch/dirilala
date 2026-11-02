@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+:root {
+    --ungu: #8b5cf6;
+    --ungu-gelap: #6d28d9;
+    --ungu-muda: #f3e8ff;
+    --pink: #fce7f3;
+    --putih: #ffffff;
+    --teks: #4c3570;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    color: var(--teks);
+    background: linear-gradient(135deg, #f5eaff, #fce7f3, #e9d5ff);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    background: rgba(139, 92, 246, 0.92);
+    color: white;
+    padding: 22px 8%;
+    box-shadow: 0 5px 20px #6d28d922;
+}
+
+header h2 {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+    padding: 8px 14px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: white;
+    color: var(--ungu-gelap);
+    transform: translateY(-3px);
+}
+
+main {
+    width: min(1000px, 92%);
+    margin: 40px auto;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.92);
+    border: 2px solid #ffffff;
+    border-radius: 28px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 12px 35px #8b5cf622;
+    animation: muncul 0.8s ease both;
+}
+
+h1, h2, h3 {
+    color: var(--ungu-gelap);
+}
+
+.hero {
+    text-align: center;
+    padding: 45px 25px;
+}
+
+.hero h1 {
+    font-size: clamp(28px, 5vw, 45px);
+}
+
+.foto {
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 7px solid white;
+    box-shadow: 0 8px 25px #8b5cf655;
+    animation: mengambang 3s ease-in-out infinite;
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 22px;
+    margin: 8px 5px 0 0;
+    background: var(--ungu);
+    color: white;
+    text-decoration: none;
+    font: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.btn:hover {
+    background: var(--ungu-gelap);
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 7px 18px #8b5cf644;
+}
+
+.btn.pink {
+    background: #ec4899;
+}
+
+.btn.pink:hover {
+    background: #be185d;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+label {
+    display: block;
+    margin: 16px 0 7px;
+    font-weight: 800;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid #e9d5ff;
+    border-radius: 14px;
+    font: inherit;
+    color: var(--teks);
+    background: #fffaff;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+input:focus, textarea:focus {
+    outline: 2px solid #c084fc;
+}
+
+.info {
+    padding: 13px 0;
+    border-bottom: 1px dashed #d8b4fe;
+    overflow-wrap: anywhere;
+}
+
+.info strong {
+    display: inline-block;
+    min-width: 110px;
+}
+
+.dekor {
+    position: fixed;
+    z-index: -1;
+    opacity: 0.55;
+    pointer-events: none;
+    animation: mengambang 4s ease-in-out infinite;
+}
+
+.dekor.satu {
+    top: 18%;
+    left: 5%;
+    font-size: 35px;
+}
+
+.dekor.dua {
+    right: 7%;
+    bottom: 15%;
+    font-size: 42px;
+    animation-delay: 1s;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #7c5a9e;
+}
+
+@keyframes mengambang {
+    0%, 100% { transform: translateY(0) rotate(-5deg); }
+    50% { transform: translateY(-15px) rotate(5deg); }
+}
+
+@keyframes muncul {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes berputar {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.bintang {
+    display: inline-block;
+    animation: berputar 8s linear infinite;
+}
+
+@media (max-width: 600px) {
+    header { padding: 20px 5%; }
+    nav { gap: 5px; }
+    nav a { padding: 7px 10px; }
+    .card { padding: 22px; }
+}

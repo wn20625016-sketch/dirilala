@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LALAPO 🌿 | My Little World</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background:
+                radial-gradient(circle at 10% 10%, rgba(168,181,138,.35), transparent 25%),
+                radial-gradient(circle at 90% 20%, rgba(124,139,90,.20), transparent 25%),
+                #F5F1E3;
+            color: #303A24;
+            overflow-x: hidden;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 18px 8%;
+
+            background: rgba(48,58,36,.96);
+            backdrop-filter: blur(12px);
+
+            box-shadow: 0 5px 25px rgba(48,58,36,.20);
+        }
+
+        .logo {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #F5F1E3;
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #D6C58B;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        nav ul li a {
+            color: #F5F1E3;
+            text-decoration: none;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        nav ul li a:hover {
+            color: #D6C58B;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 90vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 50px;
+            padding: 80px 10%;
+
+            position: relative;
+        }
+
+        .hero-text {
+            max-width: 600px;
+            animation: slideLeft 1s ease;
+        }
+
+        .small-title {
+            display: inline-block;
+
+            padding: 8px 16px;
+            margin-bottom: 20px;
+
+            background: #A8B58A;
+            color: #303A24;
+
+            border-radius: 30px;
+
+            font-weight: 700;
+        }
+
+        .hero h1 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: clamp(55px, 9vw, 100px);
+            line-height: .95;
+
+            color: #4F5D3A;
+
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #7C8B5A;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+
+            padding: 14px 25px;
+
+            border-radius: 30px;
+
+            background: #4F5D3A;
+            color: white;
+
+            text-decoration: none;
+            font-weight: 700;
+
+            box-shadow: 0 8px 20px rgba(79,93,58,.25);
+
+            transition: .3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px) rotate(-1deg);
+            background: #303A24;
+        }
+
+        .btn-light {
+            background: #D6C58B;
+            color: #303A24;
+        }
+
+        /* ================= PHOTO ================= */
+
+        .hero-photo {
+            position: relative;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .hero-photo img {
+            width: 350px;
+            height: 430px;
+
+            object-fit: cover;
+
+            border-radius: 45% 45% 35% 35%;
+
+            border: 10px solid #A8B58A;
+
+            box-shadow:
+                0 0 0 8px #F5F1E3,
+                0 20px 45px rgba(48,58,36,.30);
+        }
+
+        .photo-label {
+            position: absolute;
+            bottom: 25px;
+            left: -25px;
+
+            background: #303A24;
+            color: white;
+
+            padding: 12px 20px;
+
+            border-radius: 20px;
+
+            font-family: 'Fredoka', sans-serif;
+
+            transform: rotate(-5deg);
+
+            box-shadow: 0 10px 20px rgba(48,58,36,.25);
+        }
+
+        /* ================= SECTIONS ================= */
+
+        section {
+            padding: 90px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 45px;
+            color: #4F5D3A;
+        }
+
+        .section-title p {
+            margin-top: 10px;
+            color: #68734F;
+        }
+
+        /* ================= CARDS ================= */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: rgba(255,255,255,.75);
+
+            padding: 30px;
+
+            border-radius: 30px;
+
+            border: 2px solid #A8B58A;
+
+            box-shadow: 0 10px 30px rgba(48,58,36,.10);
+
+            transition: .4s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) rotate(.5deg);
+
+            border-color: #4F5D3A;
+
+            box-shadow: 0 20px 40px rgba(48,58,36,.18);
+        }
+
+        .card-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-family: 'Fredoka', sans-serif;
+            color: #4F5D3A;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            line-height: 1.7;
+        }
+
+        /* ================= SKILLS ================= */
+
+        .skills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill {
+            background: #A8B58A;
+            color: #303A24;
+
+            padding: 12px 20px;
+
+            border-radius: 30px;
+
+            border: 2px solid #4F5D3A;
+
+            font-weight: 700;
+
+            transition: .3s;
+        }
+
+        .skill:hover {
+            transform: scale(1.1) rotate(-3deg);
+
+            background: #4F5D3A;
+            color: white;
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about-box {
+            max-width: 900px;
+            margin: auto;
+
+            background: white;
+
+            padding: 40px;
+
+            border-radius: 35px;
+
+            border-left: 10px solid #4F5D3A;
+
+            box-shadow: 0 15px 35px rgba(48,58,36,.12);
+
+            line-height: 1.9;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            text-align: center;
+
+            padding: 35px 20px;
+
+            background: #303A24;
+            color: #F5F1E3;
+        }
+
+        footer h3 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        /* ================= FLOATING ================= */
+
+        .floating span {
+            position: fixed;
+
+            font-size: 25px;
+
+            pointer-events: none;
+
+            z-index: -1;
+
+            animation: floating 7s ease-in-out infinite;
+        }
+
+        .floating span:nth-child(1) {
+            left: 8%;
+            top: 30%;
+        }
+
+        .floating span:nth-child(2) {
+            right: 10%;
+            top: 25%;
+            animation-delay: 1s;
+        }
+
+        .floating span:nth-child(3) {
+            left: 20%;
+            bottom: 15%;
+            animation-delay: 2s;
+        }
+
+        .floating span:nth-child(4) {
+            right: 20%;
+            bottom: 20%;
+            animation-delay: 3s;
+        }
+
+        .floating span:nth-child(5) {
+            left: 50%;
+            top: 15%;
+            animation-delay: 4s;
+        }
+
+        @keyframes floating {
+
+            0%,100% {
+                transform: translateY(0) rotate(0);
+                opacity: .4;
+            }
+
+            50% {
+                transform: translateY(-30px) rotate(15deg);
+                opacity: 1;
+            }
+
+        }
+
+        @keyframes float {
+
+            0%,100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+        }
+
+        @keyframes slideLeft {
+
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media(max-width: 850px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 60px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-photo img {
+                width: 280px;
+                height: 350px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="floating">
+        <span>🌿</span>
+        <span>🍃</span>
+        <span>✨</span>
+        <span>🌱</span>
+        <span>🪴</span>
+    </div>
+
+    <nav>
+
+        <a href="index.html" class="logo">
+            LALA<span>PO</span> 🌿
+        </a>
+
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="detail.html">Tentang</a></li>
+            <li><a href="detail2.html">Hobi</a></li>
+            <li><a href="profil.html">Profil</a></li>
+        </ul>
+
+    </nav>
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <span class="small-title">
+                🌱 Welcome to my little world
+            </span>
+
+            <h1>
+                Hai, aku<br>
+                <span>LALAPO!</span>
+            </h1>
+
+            <p>
+                Selamat datang di website kecilku.
+                Di sini kamu bisa mengenal aku lebih dekat,
+                melihat hobiku, hal-hal yang aku sukai,
+                dan sedikit cerita tentang diriku. 🌿
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="detail.html" class="btn">
+                    Kenalan Yuk ✨
+                </a>
+
+                <a href="profil.html" class="btn btn-light">
+                    Lihat Profil 🌱
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-photo">
+
+            <img src="lala1.jpg" alt="Foto LALAPO">
+
+            <div class="photo-label">
+                ✦ that's me!
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <div class="section-title">
+
+            <h2>About Me 🌿</h2>
+
+            <p>
+                Sedikit cerita tentang aku
+            </p>
+
+        </div>
+
+        <div class="about-box">
+
+            <p>
+                Hai! Aku <b>LALAPO</b> 🌱
+            </p>
+
+            <br>
+
+            <p>
+                Aku adalah seseorang yang suka menikmati
+                hal-hal sederhana dalam kehidupan.
+                Aku senang mencoba sesuatu yang baru,
+                mengabadikan momen, memasak, makan,
+                dan menghabiskan waktu dengan orang-orang
+                yang aku sayangi.
+            </p>
+
+            <br>
+
+            <p>
+                Website ini dibuat sebagai ruang kecil
+                untuk memperkenalkan diriku dengan cara
+                yang lebih kreatif dan menyenangkan.
+                Semoga kamu betah berkunjung! ✨
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <div class="section-title">
+
+            <h2>My Little Things 🌱</h2>
+
+            <p>
+                Hal-hal kecil yang membuatku senang
+            </p>
+
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🍳
+                </div>
+
+                <h3>Cooking</h3>
+
+                <p>
+                    Aku suka memasak dan mencoba
+                    berbagai macam makanan baru.
+                    Memasak menjadi salah satu cara
+                    untuk menikmati waktu luang.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🍜
+                </div>
+
+                <h3>Eating</h3>
+
+                <p>
+                    Setelah memasak tentu saja
+                    bagian paling menyenangkan adalah
+                    makan. Aku suka mencoba makanan
+                    yang menarik dan enak.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    📸
+                </div>
+
+                <h3>Exploring</h3>
+
+                <p>
+                    Aku juga suka melihat tempat baru,
+                    menikmati suasana sekitar dan
+                    mengabadikan momen-momen kecil.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <div class="section-title">
+
+            <h2>My Skills ✨</h2>
+
+            <p>
+                Beberapa hal yang ingin terus aku kembangkan
+            </p>
+
+        </div>
+
+        <div class="skills">
+
+            <span class="skill">💻 Digital Business</span>
+
+            <span class="skill">🎨 Creativity</span>
+
+            <span class="skill">📱 Social Media</span>
+
+            <span class="skill">🍳 Cooking</span>
+
+            <span class="skill">📸 Photography</span>
+
+            <span class="skill">💡 Problem Solving</span>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <h3>LALAPO 🌿</h3>
+
+        <p>
+            Made with love, creativity & a little bit of green ✨
+        </p>
+
+        <br>
+
+        <p>
+            © 2026 LALAPO. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>

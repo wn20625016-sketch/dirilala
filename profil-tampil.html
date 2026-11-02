@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LALAPO 🌿 | Profil Saya</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+
+            font-family: 'Quicksand', sans-serif;
+
+            min-height: 100vh;
+
+            background:
+                radial-gradient(circle at 10% 10%, #A8B58A66, transparent 25%),
+                #F5F1E3;
+
+            color: #303A24;
+
+        }
+
+        nav {
+
+            background: #303A24;
+
+            padding: 18px 8%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+        }
+
+        .logo {
+
+            font-family: 'Fredoka';
+
+            font-size: 28px;
+
+            font-weight: 700;
+
+            color: white;
+
+            text-decoration: none;
+
+        }
+
+        .logo span {
+
+            color: #D6C58B;
+
+        }
+
+        nav ul {
+
+            display: flex;
+
+            gap: 25px;
+
+            list-style: none;
+
+        }
+
+        nav a {
+
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: 600;
+
+        }
+
+        nav a:hover {
+
+            color: #D6C58B;
+
+        }
+
+        .container {
+
+            width: 90%;
+
+            max-width: 700px;
+
+            margin: 70px auto;
+
+        }
+
+        .profile-card {
+
+            background: white;
+
+            padding: 45px;
+
+            border-radius: 40px;
+
+            border: 3px solid #A8B58A;
+
+            box-shadow: 0 20px 45px #303A2415;
+
+        }
+
+        .title {
+
+            text-align: center;
+
+            margin-bottom: 35px;
+
+        }
+
+        .title .icon {
+
+            font-size: 65px;
+
+            animation: float 3s ease-in-out infinite;
+
+        }
+
+        h1 {
+
+            font-family: 'Fredoka';
+
+            font-size: 45px;
+
+            color: #4F5D3A;
+
+        }
+
+        .profile-item {
+
+            padding: 20px;
+
+            margin-bottom: 15px;
+
+            background: #F5F1E3;
+
+            border-radius: 20px;
+
+            border-left: 6px solid #4F5D3A;
+
+        }
+
+        .profile-item strong {
+
+            display: block;
+
+            color: #4F5D3A;
+
+            font-family: 'Fredoka';
+
+            font-size: 18px;
+
+            margin-bottom: 5px;
+
+        }
+
+        .profile-item span {
+
+            line-height: 1.6;
+
+        }
+
+        .buttons {
+
+            display: flex;
+
+            gap: 15px;
+
+            margin-top: 30px;
+
+        }
+
+        .btn {
+
+            flex: 1;
+
+            text-align: center;
+
+            text-decoration: none;
+
+            padding: 14px;
+
+            border-radius: 25px;
+
+            background: #4F5D3A;
+
+            color: white;
+
+            font-weight: 700;
+
+            transition: .3s;
+
+        }
+
+        .btn:hover {
+
+            background: #303A24;
+
+            transform: translateY(-4px);
+
+        }
+
+        .btn.gold {
+
+            background: #D6C58B;
+
+            color: #303A24;
+
+        }
+
+        footer {
+
+            margin-top: 70px;
+
+            padding: 30px;
+
+            text-align: center;
+
+            background: #303A24;
+
+            color: white;
+
+        }
+
+        @keyframes float {
+
+            0%,100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+
+        }
+
+        @media(max-width:650px) {
+
+            nav {
+
+                flex-direction: column;
+
+                gap: 15px;
+
+            }
+
+            nav ul {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+            }
+
+            .profile-card {
+
+                padding: 25px;
+
+            }
+
+            .buttons {
+
+                flex-direction: column;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+
+        <a href="index.html" class="logo">
+            LALA<span>PO</span> 🌿
+        </a>
+
+        <ul>
+
+            <li>
+                <a href="index.html">Beranda</a>
+            </li>
+
+            <li>
+                <a href="detail.html">Tentang</a>
+            </li>
+
+            <li>
+                <a href="detail2.html">Hobi</a>
+            </li>
+
+            <li>
+                <a href="profil.html">Profil</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <div class="container">
+
+        <div class="profile-card">
+
+            <div class="title">
+
+                <div class="icon">
+                    🌿
+                </div>
+
+                <h1>Profil Saya</h1>
+
+                <p>
+                    Welcome to my little green profile ✨
+                </p>
+
+            </div>
+
+
+            <div class="profile-item">
+
+                <strong>NIM</strong>
+
+                <span id="showNim">
+                    -
+                </span>
+
+            </div>
+
+
+            <div class="profile-item">
+
+                <strong>Nama</strong>
+
+                <span id="showNama">
+                    -
+                </span>
+
+            </div>
+
+
+            <div class="profile-item">
+
+                <strong>Alamat</strong>
+
+                <span id="showAlamat">
+                    -
+                </span>
+
+            </div>
+
+
+            <div class="profile-item">
+
+                <strong>Hobi</strong>
+
+                <span id="showHobi">
+                    -
+                </span>
+
+            </div>
+
+
+            <div class="profile-item">
+
+                <strong>Instagram</strong>
+
+                <span id="showInstagram">
+                    -
+                </span>
+
+            </div>
+
+
+            <div class="buttons">
+
+                <a href="profil.html" class="btn gold">
+                    ✏️ Edit Profil
+                </a>
+
+                <a href="index.html" class="btn">
+                    🏠 Beranda
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <p>
+            LALAPO 🌿 — Keep growing beautifully.
+        </p>
+
+    </footer>
+
+
+    <script>
+
+        const data =
+            JSON.parse(
+                localStorage.getItem("dataProfil")
+            );
+
+        if (data) {
+
+            document.getElementById("showNim")
+                .textContent = data.nim;
+
+            document.getElementById("showNama")
+                .textContent = data.nama;
+
+            document.getElementById("showAlamat")
+                .textContent = data.alamat;
+
+            document.getElementById("showHobi")
+                .textContent = data.hobi;
+
+            document.getElementById("showInstagram")
+                .textContent = data.instagram;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

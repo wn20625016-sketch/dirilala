@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LALAPO 🌿 | Tentang Aku</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+
+            background:
+                radial-gradient(circle at 10% 10%, #A8B58A55, transparent 25%),
+                #F5F1E3;
+
+            color: #303A24;
+        }
+
+        nav {
+            background: #303A24;
+
+            padding: 18px 8%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            color: white;
+            text-decoration: none;
+
+            font-family: 'Fredoka';
+
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .logo span {
+            color: #D6C58B;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #D6C58B;
+        }
+
+        header {
+            text-align: center;
+            padding: 100px 20px 70px;
+        }
+
+        header h1 {
+            font-family: 'Fredoka';
+            font-size: 60px;
+            color: #4F5D3A;
+        }
+
+        header p {
+            margin-top: 15px;
+            font-size: 18px;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .about {
+            background: white;
+
+            padding: 40px;
+
+            border-radius: 35px;
+
+            border: 2px solid #A8B58A;
+
+            box-shadow: 0 15px 35px #303A2418;
+
+            line-height: 1.9;
+
+            margin-bottom: 60px;
+        }
+
+        .about h2,
+        .gallery-title,
+        .dream-title {
+            font-family: 'Fredoka';
+            color: #4F5D3A;
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        .favorites {
+            display: grid;
+
+            grid-template-columns: repeat(3,1fr);
+
+            gap: 25px;
+
+            margin-bottom: 70px;
+        }
+
+        .favorite {
+            background: #A8B58A;
+
+            padding: 30px;
+
+            border-radius: 30px;
+
+            text-align: center;
+
+            transition: .4s;
+        }
+
+        .favorite:hover {
+            transform: translateY(-10px) rotate(1deg);
+            background: #7C8B5A;
+            color: white;
+        }
+
+        .favorite .emoji {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .favorite h3 {
+            font-family: 'Fredoka';
+            font-size: 25px;
+        }
+
+        .gallery {
+            display: grid;
+
+            grid-template-columns: repeat(3,1fr);
+
+            gap: 20px;
+
+            margin-bottom: 70px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 280px;
+
+            object-fit: cover;
+
+            border-radius: 30px;
+
+            border: 6px solid #A8B58A;
+
+            transition: .4s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.04) rotate(-2deg);
+
+            border-color: #4F5D3A;
+        }
+
+        .dream {
+            background: #303A24;
+
+            color: white;
+
+            padding: 45px;
+
+            border-radius: 35px;
+
+            margin-bottom: 70px;
+
+            text-align: center;
+        }
+
+        .dream h2 {
+            font-family: 'Fredoka';
+            color: #D6C58B;
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .dream p {
+            line-height: 1.8;
+        }
+
+        footer {
+            background: #303A24;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 35px;
+        }
+
+        @media(max-width:800px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .favorites,
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 45px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+
+        <a href="index.html" class="logo">
+            LALA<span>PO</span> 🌿
+        </a>
+
+        <ul>
+
+            <li>
+                <a href="index.html">Beranda</a>
+            </li>
+
+            <li>
+                <a href="detail.html">Tentang</a>
+            </li>
+
+            <li>
+                <a href="detail2.html">Hobi</a>
+            </li>
+
+            <li>
+                <a href="profil.html">Profil</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <header>
+
+        <h1>Tentang Aku 🌿</h1>
+
+        <p>
+            Yuk kenalan lebih dekat dengan LALAPO!
+        </p>
+
+    </header>
+
+
+    <main class="container">
+
+        <div class="about">
+
+            <h2>Hai! Aku LALAPO ✨</h2>
+
+            <p>
+                Aku adalah seseorang yang suka dengan
+                kreativitas, pengalaman baru dan hal-hal
+                sederhana yang membuat hari menjadi lebih
+                menyenangkan.
+            </p>
+
+            <br>
+
+            <p>
+                Aku juga memiliki ketertarikan terhadap
+                dunia digital dan sedang belajar untuk
+                mengembangkan kemampuan di bidang
+                Bisnis Digital.
+            </p>
+
+            <br>
+
+            <p>
+                Website ini merupakan salah satu bentuk
+                kreativitas untuk memperkenalkan diriku
+                melalui dunia digital.
+            </p>
+
+        </div>
+
+
+        <h2 class="gallery-title">
+            Things I Love 🌱
+        </h2>
+
+        <div class="favorites">
+
+            <div class="favorite">
+
+                <div class="emoji">🍳</div>
+
+                <h3>Memasak</h3>
+
+                <p>
+                    Bereksperimen dengan makanan.
+                </p>
+
+            </div>
+
+
+            <div class="favorite">
+
+                <div class="emoji">🍜</div>
+
+                <h3>Makan</h3>
+
+                <p>
+                    Menikmati makanan enak.
+                </p>
+
+            </div>
+
+
+            <div class="favorite">
+
+                <div class="emoji">📸</div>
+
+                <h3>Foto</h3>
+
+                <p>
+                    Mengabadikan momen.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <h2 class="gallery-title">
+            My Gallery 📸
+        </h2>
+
+        <div class="gallery">
+
+            <img src="lala3.jpg" alt="Gallery">
+
+            <img src="lala2.jpg" alt="Gallery">
+
+            <img src="lala4.jpg" alt="Gallery">
+
+        </div>
+
+
+        <div class="dream">
+
+            <h2>My Dream 🌿</h2>
+
+            <p>
+                Aku ingin terus berkembang, mencoba
+                berbagai pengalaman baru dan membangun
+                sesuatu yang bermanfaat melalui kreativitas
+                dan teknologi.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            LALAPO 🌿 — My Little Green World
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
